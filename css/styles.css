@@ -1,0 +1,20 @@
+#animalForm {
+  font-size: 100px;
+}
+
+.row {
+  text-align: center;
+  align-items: center;
+}
+
+#turtle {
+  display: none;
+}
+
+#snake {
+  display: none;
+}
+
+#salamander {
+  display: none;
+}
