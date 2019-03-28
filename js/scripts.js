@@ -1,15 +1,19 @@
 $(document).ready(function(){
-
-  var animal = $("input:radio[name=animal]:checked").val();
   $("#animalForm").submit(function(event) {
-  event.preventDefault();
+    // $("body").find(".col-md-4").addClass("hidden");
+    // $("body").find(".col-md-4").toggleClass("hidden");
+    var animal = $("input:radio[name=animal]:checked").val();
+    if (animal === "turtle") {
+      $("#turtle").show();
+      $("#snake, #salamander").hide();
+    } else if (animal === "snake") {
+      $("#snake").show();
+      $("#turtle, #salamander").hide();
+    } else if (animal === "salamander") {
+      $("#salamander").show();
+      $("#snake, #turtle").hide();
+    }
 
-  if (animal === "turtle") {
-    $("#turtle").show();
-  } else if (animal === "snake") {
-    $("#snake").show();
-  } else if (animal === "salamander") {
-    $("#salamander").show();
-  }
+    event.preventDefault();
 });
 });
